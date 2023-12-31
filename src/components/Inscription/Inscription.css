@@ -1,0 +1,34 @@
+
+  /* Login.css */
+  .inscription-background {
+    background: url('/public/images/mec4.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Ajoutez cette propriété */
+  }
+  
+  .inscription-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(8px); /* Ajustez la valeur de flou selon vos préférences */
+    -webkit-filter: blur(8px); /* Pour une compatibilité avec certains navigateurs */
+  }
+  
+  .inscription-form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1; /* Pour s'assurer que le formulaire apparaît au-dessus de l'image floue */
+  }
+  
