@@ -13,21 +13,21 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Récupérer les données de l'utilisateur depuis le backend
+  
     const { data: users } = await axios.get('http://localhost:8080/utilisateurs');
 
-    // Vérifier les informations d'identification de l'utilisateur
+    
     const user = users.find(user => user.email === email && user.password === password);
 
     if (user) {
-      // Stocker les informations de l'utilisateur dans localStorage
+      
       localStorage.setItem('user', JSON.stringify(user));
       
 
-      // Rediriger vers la page d'accueil
+   
       navigate('/accueil');
     } else {
-      // Gérer l'échec de l'authentification
+      
       alert('Email ou mot de passe incorrect');
     }
   };
@@ -46,7 +46,7 @@ const Login = () => {
         <Button color="danger" className="mt-3" block type="submit">Connexion</Button>
         <p className="text right">Besoin d'aide ?</p>
         <p>Nouveau sur KLOC ? <Link to="/inscription">S'inscrire maintenant.</Link> </p>
-        <p>Cette page est protegee par Google reCAPATCHA pour garantir que vous n'etes pas un robot.</p>
+        <p>Cette page est protegee par Kyria reCAPATCHA pour garantir que vous n'etes pas un robot.</p>
       </Form>
     </div>
   );

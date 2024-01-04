@@ -2,7 +2,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './App.css';
-import Fournisseurs from './components/Fournisseurs';
 import Login from './components/Login/Login';
 import Services from './components/Services';
 import Accueil from './components/Accueil/Accueil';
@@ -33,14 +32,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* ... */}
+      
         <Route path='/' element={<Login />} />
         <Route path='/login' element={<Login />} />
         <Route path='/services' element={<Services />} />
-        <Route path='/fournisseurs' element={<Fournisseurs />} />
         <Route path='/accueil' element={<Accueil />} />
         <Route path='/inscription' element={<Inscription />} />
-        {/* ... */}
+       
       </Routes>
     </BrowserRouter>
   );

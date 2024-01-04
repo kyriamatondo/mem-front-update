@@ -19,7 +19,6 @@ const Inscription = () => {
     let user = { nom, prenom, email, password, numeroDeTelephone };
     axios.post('http://localhost:8080/utilisateurs', user)
       .then(res => {
-        // Réinitialiser les champs après une inscription réussie
         setNom('');
         setPrenom('');
         setEmail('');
@@ -73,7 +72,7 @@ const Inscription = () => {
         <Button color="danger" className="mt-3" block type="submit">Inscription</Button>
 
         <p>Avez-vous déjà un compte ? <Link to="/login">Connectez-vous.</Link></p>
-        <p>Cette page est protégée par Google reCAPTCHA pour garantir que vous n'êtes pas un robot.</p>
+        <p>Cette page est protégée par Kyria reCAPTCHA pour garantir que vous n'êtes pas un robot.</p>
       </Form>
       <ToastContainer />
     </div>
