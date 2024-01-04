@@ -1,56 +1,38 @@
 
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import './Home.css';
 import { Link } from 'react-router-dom';
 
-const Carousel = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
 
-  const handleClick = () => {
-    alert('Get Started Button clicked');
-  };
-
+const Home = () => {
   return (
-    <Slider {...settings}>
-      <div className="slide-container">
-        <img src="/images/1.jpg" alt="Slide 1" className="slide-image" />
-        <div className="slide-content">
-          <button className="get-started-button" onClick={handleClick}>
-            Get Started
-          </button>
-          <div className="slide-text">Bienvenue sur LOC-APP</div>
+    <div className="home-container">
+      <header>
+        <div className="navbar">
+          <div className="logo">
+            <Link to="/">
+              <span>K</span>LOC
+            </Link>
+          </div>
+          <div className="nav-links">
+            <Link to="/accueil">Accueil</Link>
+            <Link to="/services">Dépanne-moi</Link>
+            <Link to="/contact">Contactez-nous</Link>
+            <Link to="/login" className="btn">
+              Se connecter
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className="slide-container">
-        <img src="/images/2.jpg" alt="Slide 2" className="slide-image" />
-        <div className="slide-content">
-          <Link to="/login">
-            <button className="get-started-button">Get Started</button>
-          </Link>
-          <div className="slide-text">Bienvenue sur LOC-APP</div>
+        <div className="header-content">
+          <h1 className="title">Localisation des services de dépannage</h1>
+          <p className="subtitle">Trouvez rapidement des services de dépannage près de chez vous.</p>
+          <div className="button">
+            <Link to="/services" className="btn">
+              Découvrir
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className="slide-container">
-        <img src="/images/3.jpg" alt="Slide 3" className="slide-image" />
-        <div className="slide-content">
-          <button className="get-started-button" onClick={handleClick}>
-            Get Started
-          </button>
-          <div className="slide-text">Bienvenue sur LOC-APP</div>
-        </div>
-      </div>
-    </Slider>
+      </header>
+    </div>
   );
 };
 
-export default Carousel;
+export default Home;

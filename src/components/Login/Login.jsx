@@ -22,6 +22,7 @@ const Login = () => {
     if (user) {
       // Stocker les informations de l'utilisateur dans localStorage
       localStorage.setItem('user', JSON.stringify(user));
+      
 
       // Rediriger vers la page d'accueil
       navigate('/accueil');

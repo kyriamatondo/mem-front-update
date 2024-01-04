@@ -40,7 +40,7 @@ const Accueil = () => {
             </Link>
             <Link to="/services">Dépanne-moi</Link>
             <Link to="/contact">Contactez-nous</Link>
-            <strong className='text'>{user && <div>Bonjour, {user.email}!</div>}</strong> {/* Nouveau */}
+            <strong className='text'>{user && <div>Bonjour, {user.nom}!</div>}</strong> {/* Nouveau */}
             <button type="button" onClick={handleLogout} className='btn btn-outline-danger'>Déconnexion</button>
           </div>
         </div>

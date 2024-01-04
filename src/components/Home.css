@@ -1,40 +1,65 @@
-/* Carousel.css */
+/* App.css */
 
-.slide-container {
-    position: relative;
-    width: 100%;
-  }
-  
-  .slide-image {
-    width: 100%;
-    filter: blur(5px);
-  }
-  
-  .slide-content {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  .get-started-button {
-    font-size: 1.5em;
-    padding: 10px 20px;
-    background-color: #4caf50; /* Couleur du fond du bouton */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .get-started-button:hover {
-    background-color: #45a049; /* Couleur du fond du bouton au survol */
-  }
-  
-  .slide-text {
-    font-size: 4em;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  }  
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.home-container {
+  text-align: center;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.header-content {
+  background-image: url('public/images/mec4.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 50px;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.button {
+  margin-top: 20px;
+}
